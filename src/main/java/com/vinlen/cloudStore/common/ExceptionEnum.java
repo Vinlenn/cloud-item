@@ -5,8 +5,8 @@ import lombok.Getter;
 @Getter
 public enum ExceptionEnum {
 	PRICE_CANNOT_BE_NULL(400, "价格不能为空！"),
-
-	CATEGORY_NOT_FOUND(400,"数据为空") ;
+	CATEGORY_NOT_FOUND(400,"种类数据为空") ,
+	BRAND_NOT_FOUND(400,"品牌数据为空") ;
 
 
 	private int status;

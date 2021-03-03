@@ -20,9 +20,15 @@ public class CategoryController {
 	 * @param pid
 	 * @return
 	 */
-	@GetMapping("/of/parent")
+	@GetMapping("category/of/parent")
 	public ResponseEntity<List<Category>> queryByParentId(
 			@RequestParam(value = "pid", defaultValue = "0") Long pid) {
-		return ResponseEntity.ok(this.categoryService.queryListByParent(pid));
+		return ResponseEntity.ok(categoryService.queryListByParent(pid));
+	}
+
+	@GetMapping("category/of/brand")
+	public ResponseEntity<List<Category>> queryByBrandId(
+			@RequestParam(value = "bid") Long bid) {
+		return ResponseEntity.ok(categoryService.queryListByBrand(bid));
 	}
 }
