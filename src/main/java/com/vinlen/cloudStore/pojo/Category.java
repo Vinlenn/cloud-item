@@ -8,6 +8,7 @@ import javax.persistence.Table;
 
 @Table(name="tb_category")
 @Data
+//分类
 public class Category {
 	@Id
 	@KeySql(useGeneratedKeys=true)
